@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Format Converter - Ultimate File Converter & Compressor</title>
+  <meta name="description" content="Convert your images to different formats like JPEG, PNG, and WebP.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google AdSense placeholder -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <h1>Image Format Converter</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="compressor.html">Image Compressor</a></li>
+        <li><a href="pdf.html">PDF Converter</a></li>
+        <li><a href="audio.html">Audio Converter</a></li>
+        <li><a href="video.html">Video Converter</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main data-aos="fade-up">
+    <section>
+      <p>Select an image file to convert its format:</p>
+      <input type="file" id="imgFormatInput" accept="image/*">
+      <select id="formatSelect">
+        <option value="image/jpeg">JPEG</option>
+        <option value="image/png">PNG</option>
+        <option value="image/webp">WebP</option>
+      </select>
+      <!-- Progress Bar -->
+      <div class="progress-container">
+          <div class="progress-bar" id="progressImgFormat"></div>
+      </div>
+      <p id="progressTextImgFormat"></p>
+      <button id="convertFormatBtn">Convert Image Format</button>
+      <div class="result">
+        <a id="downloadFormatLink" href="#" download="converted-image">Download Converted Image</a>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Google AdSense Placeholder -->
+  <div class="adsense" data-aos="fade-up">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXX"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  
+  <footer data-aos="fade-up">
+    <p>&copy; 2025 Ultimate File Converter & Compressor. <a href="https://github.com/YourUsername/YourRepo" target="_blank">GitHub Repo</a></p>
+  </footer>
+  
+  <!-- AOS JS and Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'slide', once: true });
+  </script>
+</body>
+</html>
