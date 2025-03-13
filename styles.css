@@ -1,164 +1,186 @@
-/* styles.css */
-:root {
-    --primary: #2A2A72;
-    --secondary: #009FFD;
-    --light: #f8f9fa;
-    --dark: #232528;
-}
-
+/* Reset & Base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
 
-.navbar {
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+/* Header & Navigation */
+header {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #222;
 }
 
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0056b3;
+}
+
+/* Hero Section (Landing Page) */
 .hero {
-    padding: 120px 0 60px;
-    text-align: center;
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #ff4081, #ff80ab);
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 30px;
 }
 
-.upload-container {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-    margin: 2rem auto;
-    max-width: 600px;
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background: #fff;
+  color: #ff4081;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero .btn:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* Main Content */
+main {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+section h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+section p {
+  margin-bottom: 15px;
+}
+
+/* Inputs & Select */
+input[type="file"],
+select {
+  display: block;
+  margin: 10px auto 15px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Buttons with Colorful Gradients */
+button {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff4081, #ff80ab);
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #e040fb, #ea80fc);
+  transform: scale(1.03);
+}
+
+/* Progress Bar */
+.progress-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 10px auto;
+  height: 20px;
 }
 
 .progress-bar {
-    height: 10px;
-    background: #eee;
-    border-radius: 5px;
-    margin-top: 1rem;
-    overflow: hidden;
+  height: 100%;
+  width: 0%;
+  background-color: #007BFF;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  transition: width 0.5s ease;
 }
 
-.progress {
-    width: 0%;
-    height: 100%;
-    background: var(--secondary);
-    transition: width 0.3s ease;
+/* Result Links */
+.result a {
+  display: inline-block;
+  margin-top: 15px;
+  background: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
-.card {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    transition: transform 0.3s ease;
+.result a:hover {
+  background: #0056b3;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #666;
+  font-size: 0.9rem;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideUp {
-    from { transform: translateY(50px); }
-    to { transform: translateY(0); }
-}
-
-.animate-fadein {
-    animation: fadeIn 1s ease;
-}
-
-.animate-slideup {
-    animation: slideUp 0.8s ease;
-}
-
-.animate-card {
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Add these new styles */
-.hidden {
-    display: none !important;
-}
-
-.download-btn {
-    background: var(--secondary);
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    margin-top: 1rem;
-}
-
-.download-btn:hover {
-    transform: scale(1.05);
-}
-
-.file-size {
-    color: var(--dark);
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-}
-
-.loading {
-    position: relative;
-    pointer-events: none;
-}
-
-.loading:after {
-    content: "";
-    position: absolute;
-    right: -30px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    border: 3px solid rgba(255,255,255,0.3);
-    border-top-color: white;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    to { transform: translateY(-50%) rotate(360deg); }
+/* Google AdSense */
+.adsense {
+  text-align: center;
+  margin-bottom: 20px;
 }
