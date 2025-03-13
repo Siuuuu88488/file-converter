@@ -75,6 +75,24 @@
         </div>
     </section>
 
+    <!-- Update the upload container in index.html -->
+<div class="upload-container animate-slideup">
+    <input type="file" id="fileInput" multiple style="display: none;">
+    <label for="fileInput" class="upload-btn" id="uploadLabel">
+        <i class="fas fa-cloud-upload-alt"></i> <span id="btnText">Choose Files</span>
+    </label>
+    <div class="progress-bar">
+        <div class="progress" id="progressBar"></div>
+    </div>
+    <div id="downloadSection" class="hidden">
+        <button id="downloadBtn" class="download-btn">
+            <i class="fas fa-file-download"></i> Download Compressed File
+        </button>
+        <p id="fileSize" class="file-size"></p>
+    </div>
+</div>
+
+
     <script src="script.js"></script>
 </body>
 </html>
