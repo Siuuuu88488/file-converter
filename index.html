@@ -1,46 +1,78 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>File Compressor - Home</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compress files online with maximum efficiency. Support multiple formats including ZIP, RAR, 7Z, and more.">
+    <meta name="keywords" content="file compressor, compress files, online compression, reduce file size">
+    <meta name="author" content="Your Name">
+    <title>SwiftCompress | Modern File Compression</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <!-- Sidebar with Website Name -->
-  <div id="sidebar">File Compressor</div>
-
-  <!-- Header & Navigation -->
-  <header>
-    <h1>File Compressor</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="compressor.html">Compressor</a>
-      <a href="about.html">About</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">SwiftCompress</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="docs.html">Docs</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <!-- Main Content with Cards -->
-  <main>
-    <section class="cards">
-      <div class="card" onclick="location.href='compressor.html'">
-        <h2>Compress Files</h2>
-        <p>Upload & compress your files with ease</p>
-      </div>
-      <div class="card" onclick="location.href='about.html'">
-        <h2>About Us</h2>
-        <p>Learn more about our file compressor</p>
-      </div>
-      <div class="card" onclick="location.href='compressor.html'">
-        <h2>Get Started</h2>
-        <p>Start compressing now!</p>
-      </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animate-fadein">Compress Files Effortlessly</h1>
+                <p class="animate-slideup">Reduce file sizes while maintaining quality. Support for 100+ formats.</p>
+                <div class="upload-container animate-slideup">
+                    <input type="file" id="fileInput" multiple>
+                    <label for="fileInput" class="upload-btn">
+                        <i class="fas fa-cloud-upload-alt"></i> Choose Files
+                    </label>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 File Compressor. All rights reserved.</p>
-  </footer>
+    <!-- Features Grid -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="grid">
+                <div class="card animate-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Ultra-Fast Compression</h3>
+                    <p>Experience lightning-speed file processing with our optimized algorithms</p>
+                </div>
+                <div class="card animate-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure & Private</h3>
+                    <p>Military-grade encryption for all your files</p>
+                </div>
+                <div class="card animate-card">
+                    <i class="fas fa-file-archive"></i>
+                    <h3>Multi-Format Support</h3>
+                    <p>ZIP, RAR, 7Z, TAR, and more</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
