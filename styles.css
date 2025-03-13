@@ -113,3 +113,52 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Add these new styles */
+.hidden {
+    display: none !important;
+}
+
+.download-btn {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+}
+
+.file-size {
+    color: var(--dark);
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.loading:after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: translateY(-50%) rotate(360deg); }
+}
