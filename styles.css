@@ -1,0 +1,273 @@
+/* Global Styles */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #F8F9FA, #E0F7FA); /* Soft Off-White to Light Cyan */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sidebar for Website Name */
+#sidebar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border-radius: 0 10px 10px 0;
+  font-size: 1.2rem;
+  color: #FF6F61;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  z-index: 101;
+}
+
+/* Header & Navigation */
+header {
+  background: #E0F7FA;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-left: 120px; /* Leave space for sidebar */
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #0277BD;
+}
+nav {
+  margin-top: 10px;
+}
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0277BD;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #039BE5;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  margin-left: 120px; /* Space for sidebar */
+}
+
+/* Home Page Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.cards .card {
+  background: #FFFFFF;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.cards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.cards .card h2 {
+  margin-top: 0;
+  color: #0277BD;
+}
+.cards .card p {
+  color: #555;
+}
+
+/* Compressor Section */
+.compressor {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.compressor h2 {
+  color: #0277BD;
+}
+#compressForm {
+  margin: 20px 0;
+}
+#compressForm input[type="file"] {
+  display: block;
+  margin: 10px auto;
+}
+#compressForm button {
+  background: #FFD60A;
+  color: #FF6F61;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#compressForm button:hover {
+  background: #FFDC73;
+}
+#result {
+  margin-top: 20px;
+  color: #0277BD;
+}
+
+/* About Section */
+.about {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.6;
+}
+.about h2 {
+  color: #0277BD;
+}
+
+/* Footer */
+footer {
+  background: #E0F7FA;
+  padding: 10px;
+  text-align: center;
+  color: #0277BD;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Game Grid (for card flipping game) */
+#game {
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 20px;
+}
+.card {
+  width: 80px;
+  height: 80px;
+  background: #D4F4DD; /* Pale Mint */
+  border-radius: 12px;
+  cursor: pointer;
+  perspective: 600px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+.card:active {
+  transform: scale(0.95);
+}
+.card .card-back,
+.card .card-front {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  transition: transform 0.6s;
+}
+.card .card-back {
+  background: #D4F4DD;
+  color: transparent;
+}
+.card .card-front {
+  background: linear-gradient(135deg, #FFCAC8, #A2D2FF);
+  color: #4A4A4A;
+  transform: rotateY(180deg);
+}
+.card.revealed .card-back {
+  transform: rotateY(180deg);
+}
+.card.revealed .card-front {
+  transform: rotateY(0deg);
+}
+
+/* Timer Progress Bar for Game */
+#timerBar {
+  width: 100%;
+  height: 10px;
+  background: #6B7280;
+  border-radius: 5px;
+  margin: 10px auto 20px;
+  overflow: hidden;
+}
+#progress {
+  height: 100%;
+  width: 100%;
+  background: #FFD60A;
+  transition: width 1s linear;
+}
+
+/* Celebration Overlay */
+#celebration {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.9);
+  padding: 30px 40px;
+  border-radius: 12px;
+  font-size: 2rem;
+  color: #FF6F61;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  animation: pop 0.8s ease-out;
+  z-index: 100;
+}
+@keyframes pop {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Game Over Screen */
+#gameOver {
+  font-size: 1.5rem;
+  background: rgba(255,255,255,0.9);
+  padding: 20px;
+  border: 2px solid #FF6F61;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 20px;
+  color: #6B7280;
+}
+#gameOver button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background: #FFD60A;
+  color: #FF6F61;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 10px;
+}
+#gameOver button:hover {
+  background: #FFDC73;
+  transform: scale(1.05);
+}
+
+/* Hidden Elements */
+.hidden {
+  display: none;
+}
+
+/* Confetti Canvas */
+#confettiCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99;
+}
